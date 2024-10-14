@@ -1,0 +1,218 @@
+@font-face {
+    font-family:"HanaLeiFill-Regular";
+    src: url('../fonts/HanaleiFill-Regular.woff');
+}
+@font-face {
+    font-family:"Playfairdisplay" ;
+    src: url('../fonts/playfairdisplay-variablefont_wght-webfont.woff') format('webopenfont');
+}
+@font-face {
+    font-family:"Playfair";
+    src: url('../fonts/playfairdisplay-variablefont_wght-webfont.woff2');
+}
+$paragraph-color:#5c5c5c;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+.navigations{
+    width: 100%;
+    margin-top: 10px;
+    nav{
+        margin-left: 10%;
+        display: flex;
+        img{
+            height:5%;
+            width:10%;
+            }
+        ul{
+            margin-top: 10px;
+            display:flex;
+            min-height: 10vh;
+            margin-left: 45%;
+            li{
+                list-style: none;
+                margin-left: 40px;
+                a{
+                    text-decoration: none;
+                    color: $paragraph-color;
+                    letter-spacing: 2px;
+                    font: {
+                        weight:bold;
+                        size: 0.9rem;
+                        family:"Playfair";
+                    }
+                    &:hover{
+                        color: black;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+
+    }
+}
+.basics{
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    h1{
+        margin-bottom: 35px;
+        font: {
+            family:"Playfairdisplay";
+            size:2.3rem;
+        }
+    }
+    p{
+        margin-bottom: 20px;
+        color:$paragraph-color;
+    }
+}
+.menu{
+    margin: 40px 250px;
+    h2{
+        text-align: center;
+        margin-bottom: 35px;
+        font: {
+            size: 1.7rem;
+            family:"Playfairdisplay";
+        }
+    }
+    div{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .imgs{
+        margin: 8px 15px;
+        height: 380px;
+        width: 380px;
+        &:hover{
+            cursor:pointer;
+            filter: brightness(55%);
+            }
+        }
+   }
+}
+footer{
+    text-align: center;
+    padding-bottom: 40px;
+    p{
+        color:$paragraph-color;
+        a{
+            color:rgb(164, 164, 164);
+            &:hover{
+                color:black;
+            }
+        }
+    }
+}
+//Mobile L version
+@media (min-width:0) and (max-width:489.9px)
+{
+    body{
+        overflow-x:hidden;
+    }
+    .navigations{
+        width:100%;
+        nav{
+            width: 100%;
+            margin-left: 4%;
+            img{
+            width:90px;
+             }
+        ul{
+            margin-left: 27px;
+            li{
+                margin-left: 10px;
+                a{
+                    font-size: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .basics{
+        margin: 20px 40px;
+           h1{
+              margin-bottom: 35px;
+              font-size:1.8rem;
+            }
+    }
+    .menu{
+         margin: 40px 40px;
+          h2{
+             font-size: 1.5rem;
+            }
+          div{
+             .imgs{
+                 width:250px;
+                 height:250px;
+                }
+            }
+       }
+       footer {
+        p{
+            margin:20px 40px;
+        }
+    }
+}
+//Tablet version
+@media (min-width:490px) and (max-width:889.9px){
+    body{
+        overflow-x:hidden;
+    }
+    .navigations{
+        width:100%;
+        nav{
+            width: 100%;
+            margin-left: 10%;
+            img{
+            width:90px;
+             }
+        ul{
+            margin-left: 280px;
+            li{
+                margin-left: 10px;
+                a{
+                    font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    .basics{
+        margin: 30px 100px;
+           h1{
+              font-size:1.9rem;
+            }
+    }
+    .menu{
+         margin: 70px 70px;
+          h2{
+             font-size: 1.6rem;
+            }
+          div{
+             .imgs{
+                 width:280px;
+                 height:280px;
+                }
+            }
+       }
+}
+//laptop version
+@media (min-width:890px) and (max-width:1284.9px)
+{
+    .menu{ 
+        margin: 20px 80px;
+          div{
+             .imgs{
+                 width:350px;
+                 height:350px;
+                }
+            }
+       }
+}
